@@ -99,6 +99,7 @@ args="is_debug=$debug  \
   symbol_level=0 \
   enable_iterator_debugging=false \
   use_rtti=true \
+  ffmpeg_branding=\"Chrome\" \
   rtc_use_x11=false"
 
 if [ "$debug" = "true" ]; then

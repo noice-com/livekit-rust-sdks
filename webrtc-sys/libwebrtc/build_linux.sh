@@ -124,5 +124,5 @@ cp "$OUTPUT_DIR/args.gn" "$ARTIFACTS_DIR"
 cp "$OUTPUT_DIR/LICENSE.md" "$ARTIFACTS_DIR"
 
 cd src
-find . -name "*.h" -print | cpio -pd "$ARTIFACTS_DIR/include"
+find . -name "*.h" -print | cpio --quiet -pd "$ARTIFACTS_DIR/include"
 

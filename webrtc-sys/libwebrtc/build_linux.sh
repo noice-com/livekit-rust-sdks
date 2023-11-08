@@ -99,6 +99,7 @@ args="is_debug=$debug  \
   symbol_level=0 \
   enable_iterator_debugging=false \
   use_rtti=true \
+  ffmpeg_branding=\"Chrome\" \
   rtc_use_x11=false"
 
 if [ "$debug" = "true" ]; then
@@ -123,5 +124,5 @@ cp "$OUTPUT_DIR/args.gn" "$ARTIFACTS_DIR"
 cp "$OUTPUT_DIR/LICENSE.md" "$ARTIFACTS_DIR"
 
 cd src
-find . -name "*.h" -print | cpio -pd "$ARTIFACTS_DIR/include"
+find . -name "*.h" -print | cpio --quiet -pd "$ARTIFACTS_DIR/include"
 
